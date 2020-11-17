@@ -1,0 +1,10 @@
+@import "../../../src/stylesheets/abstracts/variables";
+@import "../../../src/stylesheets/abstracts/extends";
+
+.layout {
+  @extend %round;
+  box-shadow: 0 0.5em 2em rgba(27, 41, 42, 0.0625);
+  background: $white;
+  margin: 2.5rem auto !important;
+  padding: 2.5rem;
+}

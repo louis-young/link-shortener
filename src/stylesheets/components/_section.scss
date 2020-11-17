@@ -1,0 +1,17 @@
+.section {
+  &--center {
+    text-align: center;
+  }
+  &__text {
+    padding: unset;
+    margin-bottom: 1rem;
+    text-align: left;
+    &--no-bottom {
+      margin-bottom: unset;
+    }
+    &--small {
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+  }
+}

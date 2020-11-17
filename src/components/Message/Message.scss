@@ -1,0 +1,16 @@
+@import "../../../src/stylesheets/base/typography";
+@import "../../../src/stylesheets/abstracts/variables";
+@import "../../../src/stylesheets/abstracts/extends";
+
+.message {
+  @extend %round;
+  @extend %hover;
+  padding: 0.75rem 1.5rem !important;
+  background: $secondary-color;
+  margin-top: 1rem;
+  font-size: 0.975rem;
+  line-height: 1.75;
+  font-weight: $normal;
+  text-align: left;
+  cursor: pointer;
+}
