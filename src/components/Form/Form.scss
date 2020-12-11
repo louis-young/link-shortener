@@ -1,10 +1,14 @@
 @import "../../../src/stylesheets/abstracts/variables";
 @import "../../../src/stylesheets/abstracts/extends";
+@import "../../../src/stylesheets/abstracts/breakpoints";
 
 .form {
   display: grid;
-  grid-template-columns: 1fr 0.25fr;
   grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  @include tablet {
+    grid-template-columns: 1fr 0.25fr;
+  }
   &__input {
     @extend %round;
     background: $secondary-color;

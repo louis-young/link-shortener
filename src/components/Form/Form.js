@@ -6,7 +6,10 @@ import "./Form.scss";
 
 const Form = () => {
   const [link, setLink] = useState(null);
+
   const [message, setMessage] = useState(null);
+
+  const [requesting, setRequesting] = useState(false);
 
   const input = useRef();
 
@@ -20,8 +23,6 @@ const Form = () => {
 
       const host = "s.fstds.uk";
 
-      console.log(url);
-
       const urlWithoutProtocol = `${host}${url.pathname}`;
 
       return urlWithoutProtocol;
@@ -34,12 +35,13 @@ const Form = () => {
 
     (async () => {
       try {
+        setRequesting(true);
+
         const json = JSON.stringify({
           longUrl: link,
         });
 
-        const url =
-          "https://fluid-url-shortener.herokuapp.com/api/url/shorten/";
+        const url = "https://fluid-url-shortener.herokuapp.com/api/url/shorten/";
 
         const response = await fetch(url, {
           method: "POST",
@@ -53,9 +55,13 @@ const Form = () => {
 
         const data = await response.json();
 
+        setRequesting(false);
+
         setMessage(convertURL(data.shortUrl));
       } catch (error) {
         setMessage("Oops, check the URL and try again.");
+
+        setRequesting(false);
       }
     })();
 
@@ -73,7 +79,9 @@ const Form = () => {
             placeholder="https://www.louisyoung.co.uk/"
             ref={input}
           ></input>
-          <button className="form__submit button">Shorten</button>
+          <button className="form__submit button" disabled={requesting}>
+            Shorten
+          </button>
         </form>
       </section>
 
@@ -84,12 +92,7 @@ const Form = () => {
       <p className="section__text section__text--small section__text--no-bottom">
         {" "}
         Developed by{" "}
-        <a
-          className="link"
-          href="https://www.louisyoung.co.uk/"
-          target="_blank"
-          rel="noopener nofollow noreferrer"
-        >
+        <a className="link" href="https://www.louisyoung.co.uk/" target="_blank" rel="noopener nofollow noreferrer">
           Louis Young
         </a>
         .
