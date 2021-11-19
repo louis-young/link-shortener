@@ -1,6 +1,6 @@
 # URL Shortener
 
-React front-end for a full-stack MERN application for shortening URLs.
+A React front-end for a full-stack MERN application for shortening URLs.
 
 ![URL Shortener](documentation/url-shortener.jpg)
 
