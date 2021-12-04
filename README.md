@@ -20,6 +20,10 @@ I built this application as some peers at work wanted a branded link shortener.
 - React.
 - Sass (BEM).
 
+---
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ### Available Scripts
 
 In the project directory, you can run:
