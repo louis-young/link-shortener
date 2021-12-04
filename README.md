@@ -1,12 +1,12 @@
-# URL Shortener
+# Link Shortener
 
-A React front-end for a full-stack MERN application for shortening URLs.
+A link shortener tool.
 
 ![URL Shortener](documentation/url-shortener.jpg)
 
 ## Description
 
-This is an application which takes URLs and generates a smaller, shortened alternative.
+A link shortener tool that takes URLs and generates a smaller, shortened alternative that redirects to the source URL.
 
 ## Motivation
 
