@@ -8,7 +8,7 @@ A link shortener tool.
 
 ## Description
 
-A link shortener tool that takes URLs and generates a smaller, shortened alternative that redirects to the source URL.
+A link shortener tool that takes URLs and generates a smaller, shortened alternative that redirects to the original URL.
 
 ## Motivation
 
