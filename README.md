@@ -1,8 +1,10 @@
+⚠️ Please note that this is an old project and does not reflect the quality of my current work.
+
 # Link Shortener
 
 A link shortener tool.
 
-![URL Shortener](documentation/url-shortener.jpg)
+![Link Shortener](documentation/link-shortener.jpg)
 
 ## Description
 
@@ -11,6 +13,12 @@ A link shortener tool that takes URLs and generates a smaller, shortened alterna
 ## Motivation
 
 I built this application as some peers at work wanted a branded link shortener.
+
+## Technologies
+
+- JavaScript.
+- React.
+- Sass (BEM).
 
 ### Available Scripts
 
